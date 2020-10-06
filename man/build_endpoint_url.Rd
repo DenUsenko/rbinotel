@@ -7,7 +7,7 @@
 build_endpoint_url(endpoint)
 }
 \arguments{
-\item{endpoint}{an API endpoint without leading and trailing slashes"}
+\item{endpoint}{an API endpoint without leading and trailing slashes}
 }
 \description{
 Take an endpoint and attach it to the base url
