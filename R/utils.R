@@ -4,8 +4,6 @@
 #'
 #' @param x an object to be converted to unix timestamp from one of the date-time classes
 #' @param tz time zone specification to be used for the conversion
-#' @export
-
 to_unix_timestamp <- function(x, tz = "") {
 
   if (any(
@@ -19,3 +17,22 @@ to_unix_timestamp <- function(x, tz = "") {
   unix_timestamp <- as.integer(as.POSIXct(x, tz = tz))
   return(unix_timestamp)
 }
+
+
+#' Convert lists to tibble
+#'
+#' Unlists and binds list of lists
+#'
+#' @param data list of lists to convert
+to_tibble <- function(data) {
+
+  rows <- lapply(data, function(x) {
+    x[sapply(x, is.null)] <- NA
+    unlist(x)
+  })
+
+  df <- dplyr::bind_rows(rows)
+  return(df)
+
+}
+

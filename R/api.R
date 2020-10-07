@@ -31,7 +31,7 @@ add_auth_params <- function(params, api_key = NULL, api_secret = NULL) {
 #'
 #' @param endpoint API endpoint specific to the request
 #' @param params list of parameters for request
-send_api_request <- function(endpoint, params) {
+send_api_request <- function(endpoint, params = list()) {
   url <- build_endpoint_url(endpoint)
   params <- add_auth_params(params)
   request_body <- jsonlite::toJSON(params)
@@ -53,7 +53,7 @@ send_api_request <- function(endpoint, params) {
     )
   }
 
-  parsed <- jsonlite::fromJSON(httr::content(resp, as = "text", encoding = "UTF-8"), simplifyVector = FALSE)
+  parsed <- httr::content(resp, as = "parsed", simplifyVector = FALSE)
 
   if (parsed$status == "error") {
     stop(
@@ -72,4 +72,5 @@ send_api_request <- function(endpoint, params) {
 }
 
 # TODO: get key / secret and validate them
+# TODO: control API limits
 # TODO: use @importFrom

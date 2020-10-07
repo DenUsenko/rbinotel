@@ -17,4 +17,5 @@ Suggests:
 Imports: 
     assertive,
     httr,
-    jsonlite
+    jsonlite,
+    dplyr

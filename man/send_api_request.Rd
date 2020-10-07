@@ -4,7 +4,7 @@
 \alias{send_api_request}
 \title{Send request to Binotel API}
 \usage{
-send_api_request(endpoint, params)
+send_api_request(endpoint, params = list())
 }
 \arguments{
 \item{endpoint}{API endpoint specific to the request}
