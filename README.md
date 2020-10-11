@@ -1,9 +1,9 @@
+# 'rbinotel' -  An R client for the [Binotel](https://www.binotel.ua/) API <img src='man/figures/logo.png' align="right" height="139" />
+*Updated for Binotel API v4.0*
+
 <!-- badges: start -->
   ![R-CMD-check](https://github.com/DenUsenko/rbinotel/workflows/R-CMD-check/badge.svg?branch=main)
 <!-- badges: end -->
-
-# 'rbinotel' -  An R client for the [Binotel](https://www.binotel.ua/) API
-*Updated for Binotel API v4.0*
 
 -----
 
