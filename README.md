@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
   ![R-CMD-check](https://github.com/DenUsenko/rbinotel/workflows/R-CMD-check/badge.svg?branch=main)
+  [![codecov](https://codecov.io/gh/DenUsenko/rbinotel/branch/main/graph/badge.svg)](https://codecov.io/gh/DenUsenko/rbinotel)
 <!-- badges: end -->
 
 -----
