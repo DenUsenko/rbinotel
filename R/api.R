@@ -58,9 +58,9 @@ send_api_request <- function(endpoint, params = list()) {
   if (parsed$status == "error") {
     stop(
       sprintf(
-        "Binotel API request resulted in an error [%d]\n%s",
-        resp$code,
-        resp$message
+        "Binotel API request resulted in an error\n[Code %d] %s",
+        parsed$code,
+        parsed$message
       ),
       call. = FALSE
     )

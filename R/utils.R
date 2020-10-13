@@ -25,7 +25,7 @@ to_unix_timestamp <- function(x, tz = "") {
 #'
 #' @param data list of lists to convert
 to_tibble <- function(data) {
-
+  assertive::assert_is_list(data)
   rows <- lapply(data, function(x) {
     x[sapply(x, is.null)] <- NA
     unlist(x)
