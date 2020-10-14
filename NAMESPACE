@@ -2,7 +2,9 @@
 
 export(rb_call_details)
 export(rb_call_record)
+export(rb_calls_by_internal_number)
 export(rb_history_by_customer_id)
+export(rb_history_by_external_number)
 export(rb_list_calls_per_day)
 export(rb_list_employees)
 export(rb_list_lost_calls_today)
